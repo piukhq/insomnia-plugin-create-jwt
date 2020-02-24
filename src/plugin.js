@@ -27,18 +27,17 @@ module.exports.templateTags = [{
     }
   ],
   async run(context, user_id, bundle_id, organisation_id, secret) {
-    console.log("creating jwt")
+    console.log("creating jwt");
     const payload = {
       "user_id": user_id,
       "bundle_id": bundle_id,
       "organisation_id": organisation_id
-    }
-    const token = JWT.create(payload, secret, alg = "HS512")
-    delete token.body.jti
-    delete token.body.exp
+    };
+    const token = JWT.create(payload, secret, alg = "HS512");
+    delete token.body.jti;
+    delete token.body.exp;
 
-    console.log("token created")
-    return JSON.stringify(token.compact())
-      ;
-  },
+    console.log("token created");
+    return token.compact();
+  }
 }];
