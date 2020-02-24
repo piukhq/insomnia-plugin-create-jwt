@@ -1,0 +1,18 @@
+{
+  "name": "insomnia-plugin-create-jwt",
+  "description": "Create costum JWT",
+  "version": "1.0.0",
+  "main": "src/plugin.js",
+  "author": {
+    "name": "Francesco Milani"
+  },
+  "license": "LGPL-3.0-or-later",
+  "insomnia": {
+    "name": "create-jwt",
+    "description": "creates jwt"
+  },
+  "dependencies": {
+    "njwt": "^1.0.0"
+  },
+  "devDependencies": {}
+}
