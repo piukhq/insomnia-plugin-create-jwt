@@ -31,7 +31,8 @@ module.exports.templateTags = [{
     const payload = {
       "user_id": user_id,
       "bundle_id": bundle_id,
-      "organisation_id": organisation_id
+      "organisation_id": organisation_id,
+      "property_id": "currently_not_used"
     };
     const token = JWT.create(payload, secret, alg = "HS512");
     delete token.body.jti;
